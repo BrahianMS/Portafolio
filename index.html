@@ -1,27 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Personal Portfolio</title>
+    <meta name="description" content="Personal portfolio of John Brahian Montoya as a Riwi developer.">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <h1>Portafolio (bajo construcción)</h1>
+        <h1>John Brahian Montoya - Riwi Developer</h1>
+        <nav>
+            <a href="#about-me">About me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
     <section class="title">
-        <h2>About me</h2>
-        <p>Hola, mi nombre es Brahian Montoya, me encuentro aprendiendo programación y actualmente estoy empezando con
-            html y css,
-            a continuación podrás ver los projectos en los que voy trabajando</p>
+        <h2 id="about-me">About me</h2>
+        <p>Hello, I am Brahian Montoya</p>
+        <p>Now I am studying programming and I am currently learning html and css.</p>
+        <p>Below you can see the projects I'm working on.</p>
     </section>
-    <article id="all">
-        <img src="log.png" alt="imagen de la pagina Log-in">
-        <button class="btn"><a href="https://brahianms.github.io/Log-in/">Log-in</a></button>
-    </article>
+    <img src="me.jpeg" alt="Brahian's photo" width="200">
+    <ul>
+        <il>Python</il>
+        <il>HTML</il>
+        <il>CSS</il>
+    </ul>
+    <section>
+        <h2 id="projects">Projects</h2>
+        <article id="all">
+            <h3>Project 1: Log-in page</h3>
+            <img src="log.png" alt="Project Log-in image">
+        </article>
+
+        <table>
+            <tr>
+                <th>Log-in</th>
+                <th>HTML</th>
+                <th><a href="https://brahianms.github.io/Log-in/">Log-in</a></th>
+            </tr>
+            <tr>
+                <th>Website</th>
+                <th>HTML & CSS</th>
+                <th><a href="https://brahianms.github.io/Web-site/">Website</a></th>
+            </tr>
+        </table>
+    </section>
+
+    <h2 id="contact">Contact</h2>
+    <form action="/send" method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="4" required></textarea>
+
+        <input type="submit" value="Send">
+    </form>
+
+    <a href="https://github.com/BrahianMS" target="_blank">GitHub</a>
+
 </body>
 
 </html>

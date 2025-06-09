@@ -5,79 +5,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <meta name="description" content="Personal portfolio of John Brahian Montoya as a Riwi developer.">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <script src="https://kit.fontawesome.com/346d1c4a22.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
-        <h1>John Brahian Montoya - Developer</h1>
+    <header class="sections">
+        <h1 class="main__title">Portfolio - John Brahian Montoya</h1>
         <nav>
-            <a href="#about-me">About me</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <ul class="header__menu">
+                <a class="btn" href="#about_me">About me</a>
+                <a class="btn" href="#projects">Projects</a>
+                <a class="btn" href="#contact">Contact</a>
+            </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="intro">
-            <h2 id="about-me">About me</h2>
-            <p>Hello, I am Brahian Montoya</p>
-            <p>Now I am studying programming and I am currently learning html and css.</p>
-            <p>Below you can see the projects I'm working on.</p>
-            <img src="me.jpeg" alt="Brahian's photo" width="200">
-            <ul>
-                <li>Python</li>
-                <li>HTML</li>
-                <li>CSS</li>
-            </ul>
+    <main class="container">
+        <section class="sections">
+            <h2 class="section__title" id="about_me">About me</h2>
+            <div class="section__content">
+                <img src="assets/images/me.jpeg" alt="Brahian's photo" class="photo">
+                <div class="section__text">
+                    <p>Hello, I am Brahian Montoya</p>
+                    <p>Now I am studying programming and I am currently learning html and css.</p>
+                    <p>Below you can see the projects I'm working on.</p>
+                    <ul class="skills">
+                        <li class="skill">Python</li>
+                        <li class="skill">HTML</li>
+                        <li class="skill">CSS</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2 id="projects">Projects</h2>
-            <article class="project">
-                <h3>Project 1: Log-in page</h3>
-                <img src="log.png" alt="Project Log-in image">
-            </article>
+        <section class="sections">
+            <h2 class="section__title" id="projects">Projects</h2>
+            <section class="projects">
+                <article class="project">
+                    <h3>Log-in page</h3>
+                    <img src="assets/images/login_page.png" alt="Project Log-in image" class="project__img">
+                    <article class="card">
+                        <p>HTML</p>
+                        <a href="https://brahianms.github.io/Log-in/" class="btn card__btn" target="_blank">Open</a>
+                    </article>
+                </article>
+                <article class="project">
+                    <h3>Web-site</h3>
+                    <img src="assets/images/WebSite_page.png" alt="Project Log-in image" class="project__img">
+                    <article class="card">
+                        <p>HTML & CSS</p>
+                        <a href="https://brahianms.github.io/Web-site/" class="btn card__btn" target="_blank">Open</a>
+                    </article>
+                </article>
+                <article class="project">
+                    <h3>Web-Musical</h3>
+                    <img src="assets/images/MusicWeb_page.png" alt="Project Log-in image" class="project__img">
+                    <article class="card">
+                        <p>HTML & CSS</p>
+                        <a href="https://brahianms.github.io/Web-Musical-Acc/" class="btn card__btn" target="_blank">Open</a>
+                    </article>
+                </article>
+                <article class="project" id="rest">
+                    <h3>Menú-Restaurante</h3>
+                    <img src="assets/images/restaurant_page.png" alt="Project Log-in image" class="project__img">
+                        <a href="#card__qr" class="link__qr"><i class="fa-solid fa-qrcode"></i></a>
+                        <dialog id="card__qr">
+                            <img src="assets/images/restaurant_QR.png" alt="codigoqr" class="img__qr">
+                            <a href="#rest" class="btn close__qr">Close</a>
+                        </dialog>
+                    <article class="card">
+                        <p>HTML & CSS</p>
+                        <a href="https://brahianms.github.io/Restaurant/" class="btn card__btn" target="_blank">Open</a>
+                    </article>
+                </article>
+                <article class="project">
+                    <h3>Landing-Page</h3>
+                    <img src="assets/images/landig_page.png" alt="Project Log-in image" class="project__img">
+                    <article class="card">
+                        <p>HTML & CSS</p>
+                        <a href="https://brahianms.github.io/Landing_Page/" class="btn card__btn" target="_blank">Open</a>
+                    </article>
+                </article>
+                <article class="project">
+                    <h3>Game-Cards</h3>
+                    <img src="assets/images/GameCard_page.png" alt="Project Log-in image" class="project__img">
+                    <article class="card">
+                        <p>HTML & CSS</p>
+                        <a href="https://brahianms.github.io/Responsive_Deck/" class="btn card__btn" target="_blank">Open</a>
+                    </article>
+                </article>
+                <article class="project">
+                    <h3>Simulacro</h3>
+                    <img src="assets/images/simulacro_page.png" alt="Project Log-in image" class="project__img">
+                    <article class="card">
+                        <p>HTML & CSS</p>
+                        <a href="https://brahianms.github.io/Web-Musical-Acc/" class="btn card__btn" target="_blank">Open</a>
+                    </article>
+                </article>
+            </section>
         </section>
-
-        <section>
-            <table>
-                <tr>
-                    <th>Project</th>
-                    <th>Language</th>
-                    <th>Link</th>
-                </tr>
-                <tr>
-                    <td>Log-in</td>
-                    <td>HTML</td>
-                    <td><a href="https://brahianms.github.io/Log-in/">Log-in</a></td>
-                </tr>
-                <tr>
-                    <td>Website</td>
-                    <td>HTML & CSS</td>
-                    <td><a href="https://brahianms.github.io/Web-site/">Website</a></td>
-                </tr>
-            </table>
-        </section>
-        <section>
-            <h2 id="contact">Contact</h2>
-            <form action="/send" method="post">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="4" required></textarea>
-                <input type="submit" value="Send">
+        <section class="sections">
+            <h2 class="section__title" id="contact">Contact</h2>
+            <form action="" class="form">
+                <label for="name" class="form__label">Name</label>
+                <input type="text" name="name" id="name" required class="form__input">
+                <label for="email" class="form__label">Email</label>
+                <input type="email" name="email" id="email" required class="form__input">
+                <label for="message" class="form__label">Message</label>
+                <textarea name="message" id="message" rows="4" required class="form__input"></textarea>
+                <input type="submit" value="Send" class="form__btn">
             </form>
         </section>
     </main>
-    <footer>
-        <h2>Networks</h2>
-        <article>
-            <p>Github: </p>
-            <a href="https://github.com/BrahianMS" target="_blank"> BrahianMS</a>
+    <footer class="sections">
+        <h2 class="section__title">Networks</h2>
+        <article class="networks">
+            <a href="https://github.com/BrahianMS" target="_blank" class="net">Github</a>
         </article>
     </footer>
 </body>

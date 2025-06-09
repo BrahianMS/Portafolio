@@ -111,8 +111,9 @@ body {
     width: 80%;
     height: 100%;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
     justify-content: space-evenly;
 }
 
@@ -144,8 +145,8 @@ body {
     background-color: var(--secondary-color);
     font-size: 15px;
     align-items: center;
-    border-bottom-right-radius: 7px ;
-    border-bottom-left-radius: 7px ;
+    border-bottom-right-radius: 8px ;
+    border-bottom-left-radius: 8px ;
 }
 
 .card__btn {
@@ -164,7 +165,7 @@ body {
         display: flex;
         justify-content: space-around;
         position: absolute;
-        bottom: 9px;
+        bottom: 10.8px;
         left: 30px;
         transform: scale(1.2);
     }
@@ -263,9 +264,28 @@ textarea {
     text-decoration: underline;
 }
 
-
-
-
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+    .section__content{
+        flex-direction: column;
+    }
+    .photo {
+        margin: auto;
+    }
+    .projects {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 1em;
+    }
+    .project {
+        margin: auto;
+    }
+    .form, input, textarea {
+        width: 100%;
+    }
+}
 
 
 @font-face {

@@ -6,27 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <meta name="description" content="Personal portfolio of John Brahian Montoya as a Riwi developer.">
     <link rel="stylesheet" href="assets/styles/styles.css">
-    <script src="https://kit.fontawesome.com/346d1c4a22.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <!-------------------Header with title and navbar--------------->
     <header class="sections">
+        <!--main title-->
         <h1 class="main__title">Portfolio - John Brahian Montoya</h1>
+        <!--navbar-->
         <nav>
             <ul class="header__menu">
-                <a class="btn" href="#about_me">About me</a>
-                <a class="btn" href="#projects">Projects</a>
-                <a class="btn" href="#contact">Contact</a>
+                <a class="btn btn__nav" href="index.html">About me</a>
+                <a class="btn btn__nav" href="assets/pages/portfolio.html">Projects</a>
+                <a class="btn btn__nav" href="assets/pages/contact.html">Contact</a>
             </ul>
         </nav>
     </header>
-
+    <!-------------------------Content with About-me--------------------->
     <main class="container">
+        <!-----------Presentation--------------->
         <section class="sections">
             <h2 class="section__title" id="about_me">About me</h2>
-            <div class="section__content">
+            <article class="section__content">
                 <img src="assets/images/me.jpeg" alt="Brahian's photo" class="photo">
                 <div class="section__text">
                     <p>Hello, I am Brahian Montoya</p>
@@ -38,92 +40,15 @@
                         <li class="skill">CSS</li>
                     </ul>
                 </div>
-            </div>
-        </section>
-
-        <section class="sections">
-            <h2 class="section__title" id="projects">Projects</h2>
-            <section class="projects">
-                <article class="project">
-                    <h3>Log-in page</h3>
-                    <img src="assets/images/login_page.png" alt="Project Log-in image" class="project__img">
-                    <article class="card">
-                        <p>HTML</p>
-                        <a href="https://brahianms.github.io/Log-in/" class="btn card__btn" target="_blank">Open</a>
-                    </article>
-                </article>
-                <article class="project">
-                    <h3>Web-site</h3>
-                    <img src="assets/images/WebSite_page.png" alt="Project Log-in image" class="project__img">
-                    <article class="card">
-                        <p>HTML & CSS</p>
-                        <a href="https://brahianms.github.io/Web-site/" class="btn card__btn" target="_blank">Open</a>
-                    </article>
-                </article>
-                <article class="project">
-                    <h3>Web-Musical</h3>
-                    <img src="assets/images/MusicWeb_page.png" alt="Project Log-in image" class="project__img">
-                    <article class="card">
-                        <p>HTML & CSS</p>
-                        <a href="https://brahianms.github.io/Web-Musical-Acc/" class="btn card__btn" target="_blank">Open</a>
-                    </article>
-                </article>
-                <article class="project" id="rest">
-                    <h3>Menú-Restaurante</h3>
-                    <img src="assets/images/restaurant_page.png" alt="Project Log-in image" class="project__img">
-                        <a href="#card__qr" class="link__qr"><i class="fa-solid fa-qrcode"></i></a>
-                        <dialog id="card__qr">
-                            <img src="assets/images/restaurant_QR.png" alt="codigoqr" class="img__qr">
-                            <a href="#rest" class="btn close__qr">Close</a>
-                        </dialog>
-                    <article class="card">
-                        <p>HTML & CSS</p>
-                        <a href="https://brahianms.github.io/Restaurant/" class="btn card__btn" target="_blank">Open</a>
-                    </article>
-                </article>
-                <article class="project">
-                    <h3>Landing-Page</h3>
-                    <img src="assets/images/landig_page.png" alt="Project Log-in image" class="project__img">
-                    <article class="card">
-                        <p>HTML & CSS</p>
-                        <a href="https://brahianms.github.io/Landing_Page/" class="btn card__btn" target="_blank">Open</a>
-                    </article>
-                </article>
-                <article class="project">
-                    <h3>Game-Cards</h3>
-                    <img src="assets/images/GameCard_page.png" alt="Project Log-in image" class="project__img">
-                    <article class="card">
-                        <p>HTML & CSS</p>
-                        <a href="https://brahianms.github.io/Responsive_Deck/" class="btn card__btn" target="_blank">Open</a>
-                    </article>
-                </article>
-                <article class="project">
-                    <h3>Simulacro</h3>
-                    <img src="assets/images/simulacro_page.png" alt="Project Log-in image" class="project__img">
-                    <article class="card">
-                        <p>HTML & CSS</p>
-                        <a href="https://brahianms.github.io/Simulacro-html-1/" class="btn card__btn" target="_blank">Open</a>
-                    </article>
-                </article>
-            </section>
-        </section>
-        <section class="sections">
-            <h2 class="section__title" id="contact">Contact</h2>
-            <form action="" class="form">
-                <label for="name" class="form__label">Name</label>
-                <input type="text" name="name" id="name" required class="form__input">
-                <label for="email" class="form__label">Email</label>
-                <input type="email" name="email" id="email" required class="form__input">
-                <label for="message" class="form__label">Message</label>
-                <textarea name="message" id="message" rows="4" required class="form__input"></textarea>
-                <input type="submit" value="Send" class="form__btn">
-            </form>
+            </article>
         </section>
     </main>
-    <footer class="sections">
+    <!--------------------Footer with Networks------------------->
+    <footer class="sections footer">
         <h2 class="section__title">Networks</h2>
         <article class="networks">
             <a href="https://github.com/BrahianMS" target="_blank" class="net">Github</a>
+            <a href="https://instagram.com/brahian_ms" target="_blank" class="net">Instagram</a>  
         </article>
     </footer>
 </body>

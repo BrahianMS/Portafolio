@@ -1,9 +1,11 @@
+/*                        RESET                       */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*                      VARIABLES                     */
 :root {
     --background-color: #d3d3d3;
     --primary-color: #00bf8c;
@@ -14,9 +16,11 @@
     --font-content: 'Oswald';
 }
 
+/*                     GENERAL STYLES                 */
 body {
     background-color: var(--background-color);
     font-family: var(--font-content);
+    color: var(--font-color);
 }
 
 .container {
@@ -25,6 +29,9 @@ body {
     padding: 1em;
 }
 
+/*                      HEADER                        */
+
+/*    MAIN TITLE     */
 .main__title {
     margin: 20px;
     font-family: var(--font-title);
@@ -32,12 +39,14 @@ body {
     text-shadow: 2px 2px 2px var(--font-color);
 }
 
+/*      NAV BAR      */
 .header__menu {
     display: flex;
     gap: 50px;
     justify-content: center;
 }
 
+/*   NAV LINKS   */
 .btn {
     background-color: var(--primary-color);
     height: 40px;
@@ -46,12 +55,9 @@ body {
     text-align: center;
     border-radius: 8px;
     border: white;
-    transition: background-color 0.3s ease;
-    transition: border 0.3s ease;
-    transition: transform 0.3s ease;
+    transition: background-color 0.5s ease, border 0.2s ease, transform 0.3s ease, color 0.3s ease;
     text-decoration: none;
     color: white;
-    transition: color 0.3s ease;
     box-shadow: 2px 2px 2px var(--font-color);
 }
 
@@ -62,6 +68,28 @@ body {
     color: var(--primary-color);
 }
 
+.btn__nav:nth-child(1) {
+    animation:1s linear slide ;
+}
+.btn__nav:nth-child(2) {
+    animation:0.7s linear slide ;
+}
+.btn__nav:nth-child(3) {
+    animation:0.5s linear slide ;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/*      CONTENT      */
 .sections {
     background-color: white;
     border-radius: 8px;
@@ -71,19 +99,21 @@ body {
     font-size: 20px;
     margin: 10px auto;
     padding: 1em;
-    box-shadow: 0 0 5px var(--secondary-color);
+    box-shadow: 0 0 5px var(--font-color);
 }
 
 .section__title {
     font-size: 30px;
-    margin: 10px;
+    margin: 20px;
     font-family: var(--font-title);
     color: var(--primary-color);
     text-shadow: 2px 2px 2px var(--font-color);
 }
-
+/*   ABOUT-ME    */
 .section__content {
     display: flex;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .section__text {
@@ -107,6 +137,7 @@ body {
     list-style-position: inside;
 }
 
+/*     PROJECTS   */
 .projects {
     width: 80%;
     height: 100%;
@@ -120,12 +151,48 @@ body {
 .project {
     width: 260px;
     height: 300px;
-    margin: 20px;
+    margin: 20px auto;
     padding: 1em;
     text-align: center;
     position: relative;
     box-shadow: 0 0 5px var(--primary-color);
     border-radius: 8px;
+}
+
+.project:nth-child(1) {
+    animation: slide-up 0.2s linear;
+}
+.project:nth-child(2) {
+    animation: slide-up 0.4s linear;
+}
+.project:nth-child(3) {
+    animation: slide-up 0.6s linear;
+}
+.project:nth-child(4) {
+    animation: slide-up 0.8s linear;
+}
+.project:nth-child(5) {
+    animation: slide-up 1s linear;
+}
+.project:nth-child(6) {
+    animation: slide-up 1.2s linear;
+}
+.project:nth-child(7) {
+    animation: slide-up 1.4s linear;
+}
+.project:nth-child(8) {
+    animation: slide-up 1.6s linear;
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(500px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .project__img{
@@ -139,7 +206,7 @@ body {
 
 .card {
     display: none;
-    transition: display 0.3s ease, transform 0.3s, width 0.3s;
+    transition: display 1s ease, transform 0.3s;
     width: 200px;
     height: 50px;
     background-color: var(--secondary-color);
@@ -206,6 +273,10 @@ body {
     font-size: 28px;
 }
 
+.link__qr:hover {
+    transform: scale(1.2);
+}
+
 .img__qr {
     width: 300px;
     border-radius: 15px;
@@ -217,7 +288,8 @@ body {
     background-color: white;
 }
 
-form {
+/*     FORM    */
+.form {
     margin: 0 auto;
     width: 400px;
     padding: 1em;
@@ -226,33 +298,41 @@ form {
     text-align: end;
 }
 
-form label {
+.form__label {
     display: inline-block;
     width: 90px;
     text-align: right;
 }
 
-input,
-textarea {
-    font: 1em sans-serif;
+.form__input {
+    font-size: 1em;
     width: 300px;
     border: 1px solid #999;
-    color: black;
 }
 
-input:focus,
-textarea:focus {
-    border-color: #000;
+.form__input:hover {
+    border-color: var(--primary-color);
 }
 
-textarea {
-    vertical-align: top;
-    height: 5em;
+.form__btn {
+    font-size: 1em;
+    font-weight: bold;
+    width: 300px;
+    border: 1px solid #999;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 2px var(--font-color);
 }
 
+/*    FOOTER   */
+.footer {
+    position: absolute;
+    bottom: 0;
+}
 .networks {
     display: inline-flex;
     font-size: 20px;
+    gap: 20px;
 }
 
 .net {
@@ -264,15 +344,29 @@ textarea {
     text-decoration: underline;
 }
 
-@media (max-width: 480px) {
+
+/*             MEDIA QUERIES         */
+@media (max-width: 768px) {
     .container {
         width: 95%;
     }
+    .projects {
+        column-gap: 1em;
+    }
+    .footer {
+        position: relative;
+    }
+}
+
+@media (max-width: 480px) {
     .section__content{
         flex-direction: column;
     }
     .photo {
         margin: auto;
+    }
+    .section__text {
+        width: 100%;
     }
     .projects {
         grid-template-columns: 1fr;
@@ -282,12 +376,12 @@ textarea {
     .project {
         margin: auto;
     }
-    .form, input, textarea {
+    .form, .form__input, .form__btn {
         width: 100%;
     }
 }
 
-
+/*       SECONDARY FONT      */
 @font-face {
     font-family: 'Sequel';
     src: url(../fonts/Sequel.ttf) format(truetype);

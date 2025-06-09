@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <!-------------------Header with title and navbar--------------->
+    <header class="sections">
+        <!--main title-->
+        <h1 class="main__title">Portfolio - John Brahian Montoya</h1>
+        <!--navbar-->
+        <nav>
+            <ul class="header__menu">
+                <a class="btn btn__nav" href="../../index.html">About me</a>
+                <a class="btn btn__nav" href="portfolio.html">Projects</a>
+                <a class="btn btn__nav" href="contact.html">Contact</a>
+            </ul>
+        </nav>
+    </header>
+    <!-------------------------Content with Form----------------------->
+    <main class="container">
+        <section class="sections">
+            <h2 class="section__title" id="contact">Contact</h2>
+            <!--Contact-Form-->
+            <form action="" class="form">
+                <label for="name" class="form__label">Name</label>
+                <input type="text" name="name" id="name" required class="form__input">
+                <label for="email" class="form__label">Email</label>
+                <input type="email" name="email" id="email" required class="form__input">
+                <label for="message" class="form__label">Message</label>
+                <textarea name="message" id="message" rows="4" required class="form__input"></textarea>
+                <input type="submit" value="Send" class="form__btn">
+            </form>
+        </section>
+    </main>
+    <!--------------------Footer with Networks------------------->
+    <footer class="sections footer">
+        <h2 class="section__title">Networks</h2>
+        <article class="networks">
+            <a href="https://github.com/BrahianMS" target="_blank" class="net">Github</a>
+            <a href="https://instagram.com/brahian_ms" target="_blank" class="net">Instagram</a>
+        </article>
+    </footer>
+</body>
+</html>

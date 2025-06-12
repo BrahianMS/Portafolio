@@ -21,6 +21,9 @@ body {
     background-color: var(--background-color);
     font-family: var(--font-content);
     color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
@@ -326,8 +329,7 @@ body {
 
 /*    FOOTER   */
 .footer {
-    position: absolute;
-    bottom: 0;
+    margin-top: auto;
 }
 .networks {
     display: inline-flex;
@@ -352,9 +354,6 @@ body {
     }
     .projects {
         column-gap: 1em;
-    }
-    .footer {
-        position: relative;
     }
 }
 
